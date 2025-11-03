@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Solver</title>
+    <script src="task.js"></script>
+    <link href="task.css" rel="stylesheet">
+</head>
+<body class="nav">
+
+    <div class="main">
+        <h1 class="head">Linear System Solver</h1>
+        <div class="input">
+            <div class="rows-cols">
+                
+                <div class="rows">
+                <label for="size_row" class="rows">Rows :</label>
+                <input id="size_row" type="number" min="1" value="3" class="rows"/>
+                </div>
+                
+                <div class="cols">
+                    <label for="size_col" class="cols">Cols :</label> 
+                    <input id="size_col" type="number" min="2" value="4" class="cols"/>
+                </div>
+
+                <div class="Matrix">
+                    <button onclick="generateMatrix()" class="Matrix">
+                        Generate Matrix
+                    </button>
+                </div>
+            </div>
+            
+            <div class="methods">
+                <div class="methods">
+                    <label for="method" class="methods">Method:</label>
+                    <select id="method" class="methods">
+                        <option value="gaussJordan">Gauss-Jordan Elimination</option>
+                        <option value="gaussian">Gaussian Elimination</option>
+                    </select>
+                </div>
+
+                <div class="solve">
+                    <button onclick="solve()" class="solve">
+                        Solve System
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="matrixInput" class="text-input">
+            <p class="text-input">Enter dimensions and click 'Generate Matrix' to begin.</p>
+        </div>
+
+        <div class="text-output">
+            <h2 class="text-output">Solution Steps and Result</h2>
+            <pre id="output" class="text-output"></pre>
+        </div>
+
+    </div>
+
+</body>
+</html>
